@@ -45,4 +45,7 @@ $theme-dark: #222;
 .footer .text-right.text-gray {
         display: none;
     }
+    .footer .text-right.text-gray {
+        display: none !important;
+    }
     
