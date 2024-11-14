@@ -11,3 +11,12 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
+<!-- Custom Script to Hide Open Source Footer -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var footer = document.querySelector(".footer .text-right.text-gray");
+        if (footer) {
+            footer.style.display = "none";
+        }
+    });
+</script>
