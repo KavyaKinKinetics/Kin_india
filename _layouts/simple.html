@@ -4,13 +4,25 @@
     {% include head.html %}
 </head>
 <body>
-    <section id="page-content">
+    {% include nav.html %} <!-- Include navigation for consistency -->
+
+    <header class="py-5 bg-light text-center">
         <div class="container">
-            {{ content }}
+            <h1>{{ page.title }}</h1> <!-- Display the page title -->
+            <p class="lead text-muted">{{ page.description }}</p> <!-- Optional description -->
+        </div>
+    </header>
+
+    <section id="page-content" class="my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{ content }}
+                </div>
+            </div>
         </div>
     </section>
-    {% include footer.html %}
+
     {% include scripts.html %}
 </body>
 </html>
-

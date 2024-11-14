@@ -48,4 +48,10 @@ $theme-dark: #222;
     .footer .text-right.text-gray {
         display: none !important;
     }
+    .content-image {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
     
