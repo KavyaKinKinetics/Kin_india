@@ -1,3 +1,5 @@
+---
+---
 @charset "utf-8";
 
 // Example Defaults
@@ -16,8 +18,9 @@
 // $grey-color-light: lighten($grey-color, 40%);
 // $grey-color-dark:  darken($grey-color, 25%);
 
-// Width of the content area
+// // Width of the content area
 // $content-width:    800px;
+
 // $on-palm:          600px;
 // $on-laptop:        800px;
 
@@ -29,26 +32,24 @@
 //     }
 // }
 
-// Variables
+// variables.less
 $theme-primary: #F05F40;
 $theme-dark: #222;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "mixins", "base";
-
-// Footer adjustments
+@import
+        "mixins",
+        "base"
+;
 .footer .text-right.text-gray {
-    display: none;
-}
-
-.footer .text-right.text-gray {
-    display: none !important;
-}
-
-// Content image formatting
-.content-image {
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-}
+        display: none;
+    }
+    .footer .text-right.text-gray {
+        display: none !important;
+    }
+    .content-image {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
