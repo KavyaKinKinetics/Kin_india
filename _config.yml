@@ -1,9 +1,9 @@
 # Site settings
 title: KinKinetics
-email: kinkinetics@kinkinetics.com
-description: "Enhancing astronaut resilience and productivity through innovative emotional and psychological support technologies for long-duration space missions."
+email: info@kinkinetics.com
+description: "Decision support technologies for high stake missions."
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://www.kinkinetics.com" # the base hostname & protocol for your site
+url: "https://www.kinkinetics.co.in" # the base hostname & protocol for your site
 
 twitter_username: KinKinetics
 github_username: ""
