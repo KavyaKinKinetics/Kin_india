@@ -152,7 +152,7 @@ aside {
 header {
     position: relative;
     width: auto;
-    min-height: 100%;
+    min-height: 75%;
     @include background-cover;
     background-position: center;
     background-image: url('../img/header3.png');
