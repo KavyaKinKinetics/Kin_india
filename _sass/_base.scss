@@ -348,4 +348,7 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: $theme-dark;
 }
+body.blogs-page header {
+    background-image: none;  // Disable background image for the blogs page
+}
 
