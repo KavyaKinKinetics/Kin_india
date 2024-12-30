@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blogs
+title: The Importance of Time-Critical Decision Support Systems in Health, Space, and Defense
 ---
 
 <style>
@@ -12,11 +12,21 @@ title: Blogs
         color: #333;
     }
 
-    h1 {
+    h2 {
+        font-family: "Arial", sans-serif;
         font-size: 2.5rem;
-        color: #0056b3;
-        text-align: center;
-        margin: 40px 0 20px;
+        font-weight: bold;
+        color: #0056b3; /* Dark blue for the title */
+        margin-top: 20px;
+    }
+
+    p {
+        font-family: "Arial", sans-serif;
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: justify; /* Justified text for consistency */
+        margin: 20px auto;
+        max-width: 800px; /* Restrict content width */
     }
 
     .container {
@@ -24,85 +34,38 @@ title: Blogs
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
     }
 
-    /* Article Card Styles */
-    .article-card {
-        display: flex;
-        background-color: #fff;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    img {
+        margin: 20px auto;
         border-radius: 8px;
-        margin-bottom: 20px;
-        overflow: hidden;
         width: 100%;
-        max-width: 800px;
-        cursor: pointer;
-        transition: transform 0.2s;
+        max-width: 800px; /* Ensure images align with text width */
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for modern look */
     }
 
-    .article-card:hover {
-        transform: scale(1.02);
-    }
-
-    /* Thumbnail Image Styling */
-    .article-card img {
-        width: 180px;
-        object-fit: cover;
-        border-right: 2px solid #e0e0e0;
-    }
-
-    /* Content Styling */
-    .article-content {
-        padding: 15px;
-        flex: 1;
-    }
-
-    .article-content h2 {
-        font-size: 1.5rem;
-        color: #007bff;
-        margin: 0;
-    }
-
-    .article-content h2:hover {
-        text-decoration: underline;
-    }
-
-    .article-content p {
-        font-size: 0.9rem;
-        color: #666;
-        margin-top: 10px;
-    }
-
-    @media (max-width: 768px) {
-        .article-card {
-            flex-direction: column;
-        }
-
-        .article-card img {
-            width: 100%;
-            height: auto;
-            border-right: none;
-        }
+    .text-muted {
+        font-weight: bold; /* Bold subtitle */
+        color: #6c757d; /* Subtle gray for subtitle */
     }
 </style>
 
-<section id="blogs">
+<section id="project-details">
     <div class="container">
-        <!-- Page Title -->
-        <h1>Blogs</h1>
-
-        <!-- Article Card -->
-        <div class="article-card" onclick="window.location.href='article1.html'">
-            <img src="Pages/UpdatesPage/Images/inArticle1.png" alt="Time-Critical Decision Support Systems">
-            <div class="article-content">
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
                 <h2>The Importance of Time-Critical Decision Support Systems in Health, Space, and Defense</h2>
-                <p>December 30, 2024 | 5-6 min read</p>
             </div>
         </div>
 
-        <!-- Add additional cards as needed -->
-
+        <!-- First Image and Description -->
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <img src="Pages/UpdatesPage/Images/inArticle1.png" alt="Time-Critical Decision Support Systems">
+                <p> In our fast-paced world, the demand for timely and accurate decision-making is higher than ever, particularly in critical sectors such as healthcare, space exploration, and defense. Time-Critical Decision Support Systems (TCDSS) are essential tools that enhance decision-making processes, empowering professionals to respond effectively to emergencies and complex situations. This blog post explores the latest developments surrounding TCDSS and underscores their impact and significance across these vital fields.                </p>
+            </div>
+        </div>
     </div>
 </section>
