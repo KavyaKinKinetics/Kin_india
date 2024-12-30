@@ -1,119 +1,67 @@
 ---
 layout: page
-title: The Importance of Time-Critical Decision Support Systems in Health, Space, and Defense
+title: Blogs
 ---
 
-<style>
-    /* Override the background image for this page */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f8f9fa;
-        color: #333;
-        background-image: none; /* Ensure no background image */
-    }
-
-    h2 {
-        font-family: "Arial", sans-serif;
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #0056b3; /* Dark blue for the title */
-        margin-top: 20px;
-    }
-
-    p {
-        font-family: "Arial", sans-serif;
-        font-size: 1rem;
-        line-height: 1.8;
-        text-align: justify;
-        margin: 20px auto;
-        max-width: 800px;
-    }
-
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-    }
-
-    img {
-        margin: 20px auto;
-        border-radius: 8px;
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .text-muted {
-        font-weight: bold;
-        color: #6c757d;
-    }
-</style>
-
-
-        /* Article Card Styles */
-        .article-card {
-            display: flex;
-            background-color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-bottom: 20px;
-            overflow: hidden;
-            transition: transform 0.2s;
-        }
-    
-        .article-card:hover {
-            transform: scale(1.02);
-        }
-    
-        /* Thumbnail Image Styling */
-        .article-card img {
-            width: 180px;
-            object-fit: cover;
-            border-right: 2px solid #e0e0e0;
-        }
-    
-        /* Content Styling */
-        .article-content {
-            padding: 15px;
-            flex: 1;
-        }
-    
-        .article-content h2 {
-            font-size: 1.8rem;
-            color: #007bff;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include head.html %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            cursor: pointer;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-    
-        .article-content h2:hover {
+        header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: left;
+        }
+        header a {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #007bff; /* Blue color for the logo */
+            text-decoration: none;
+        }
+        .content {
+            flex: 1; /* Push footer to the bottom */
+            padding: 20px;
+        }
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #007bff; /* Blue links */
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
             text-decoration: underline;
         }
-    
-        .article-content p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 10px;
-        }
     </style>
-    
-    <section id="updates">
-        <div class="container">
-            <!-- Title "Updates" -->
-            <h1>Updates</h1>
-    
-            <!-- Article 3 (Latest Article) -->
-            <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/Article3.html'">
-                <!-- Thumbnail Image -->
-                <img src="/Pages/UpdatesPage/Images/article3.png" alt="Thumbnail Image">
-                <!-- Title and Date -->
-                <div class="article-content">
-                    <h2>Non Invasive Mind Control Robotic Arms</h2>
-                    <p>December 30, 2024 | 4-5 min read</p>
-                </div>
-            </div>
+</head>
+<body>
+    <header>
+        <a href="https://www.kinkinetics.co.in/">KINKINETICS</a>
+    </header>
+
+    <div class="content">
+        <!-- Content for Blogs Page will go here -->
+        <h1>Welcome to the KinKinetics Blog</h1>
+        <p>Stay updated with the latest insights, research, and developments in personalized AI companions and emotionally intelligent technologies.</p>
     </div>
-</section>
+
+    <footer>
+        © 2024 KinKinetics. All Rights Reserved. &nbsp;
+        <a href="{{ site.baseurl }}/privacy-policy.html">Privacy Policy</a>
+        <a href="{{ site.baseurl }}/terms-and-conditions.html">Terms and Conditions</a>
+    </footer>
+</body>
+</html>
