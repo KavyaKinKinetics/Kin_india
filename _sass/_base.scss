@@ -151,7 +151,7 @@ aside {
 
 header {
     position: relative;
-    width: 100%;
+    width: fit-content;
     //height: auto;
     @include background-cover;
     background-position: center;
