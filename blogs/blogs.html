@@ -2,18 +2,6 @@
 layout: page
 title: "Updates"
 ---
-<!--
-<!-- Navigation Bar -->
-<!--
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-  <!--      <div class="navbar-header">
-            <!-- Brand Link with Orange Color -->
-   <!--         <a class="navbar-brand" href="https://www.kinkinetics.co.in/" style="color: rgb(0, 0, 0); font-weight: bold;">KINKINETICS</a>
-        </div>
-    </div>
-</nav>
 
 <style>
     /* General Styling */
@@ -21,27 +9,10 @@ title: "Updates"
         font-family: Arial, sans-serif;
         background-color: #f5f5f5;
         color: #333;
-        margin-top: 50px; /* Adding top margin to avoid content hiding under navbar */
+        margin-top: 50px; /* Prevent content from overlapping navbar */
     }
 
-    /* Navbar Styling */
-    .navbar {
-        background-color: #333;
-        border: none;
-        padding: 10px 0;
-        z-index: 1000; /* Ensures navbar stays on top of other content */
-        position: fixed;
-        top: 0;
-        width: 100%;
-    }
-
-    .navbar-brand {
-        color: orange !important;
-        font-weight: bold;
-        font-size: 1.5rem;
-    }
--->
-    /* Container and Section Styles */
+    /* Updates Section */
     #updates .container {
         max-width: 900px;
         margin: 0 auto;
@@ -64,6 +35,7 @@ title: "Updates"
         margin-bottom: 20px;
         overflow: hidden;
         transition: transform 0.2s;
+        cursor: pointer;
     }
 
     .article-card:hover {
@@ -87,7 +59,6 @@ title: "Updates"
         font-size: 1.8rem;
         color: #007bff;
         margin: 0;
-        cursor: pointer;
     }
 
     .article-content h2:hover {
@@ -103,25 +74,18 @@ title: "Updates"
 
 <section id="updates">
     <div class="container">
-        <!-- Title "Updates" -->
+        <!-- Title -->
         <h1>Updates</h1>
 
-        <!-- Article 2 (Latest Article) -->
-        
-    <!-- Article 1  -->
-    <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/Article1.html'">
-        <!-- Thumbnail Image -->
-        <img src="/Pages/UpdatesPage/Images/inArticle1.png" alt="Thumbnail Image">
-        <!-- Title and Date -->
-        <div class="article-content">
-            <h2>The Importance of Time-Critical Decision Support Systems in Health, Space, and Defense</h2>
-            <p>December 30, 2024 | 4-5 min read</p>
+        <!-- Article 1 -->
+        <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/Article1.html'">
+            <!-- Thumbnail Image -->
+            <img src="/Pages/UpdatesPage/Images/inArticle1.png" alt="Thumbnail Image">
+            <!-- Title and Metadata -->
+            <div class="article-content">
+                <h2>The Importance of Time-Critical Decision Support Systems in Health, Space, and Defense</h2>
+                <p>December 30, 2024 | 4-5 min read</p>
+            </div>
         </div>
     </div>
-    
-    </div>
 </section>
-
-<!-- Bootstrap JavaScript for Navbar Toggle -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
