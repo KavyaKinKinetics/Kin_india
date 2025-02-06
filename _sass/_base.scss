@@ -175,7 +175,7 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(#264653, .7); //white
+                color: rgba(#264653, .7); //Decisions in Moments, Impact for a Lifetime!
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -296,11 +296,11 @@ header {
 
 // Button Styles
 .btn-default {
-    @include button-variant($theme-dark, black, black); //white
+    @include button-variant($theme-dark, red, green); //white
 }
 
 .btn-primary {
-    @include button-variant(black, $theme-primary, $theme-primary);
+    @include button-variant(rgb(228, 20, 225), $theme-primary, $theme-primary);
 }
 
 .btn {
