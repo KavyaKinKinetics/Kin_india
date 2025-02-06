@@ -110,7 +110,7 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: rgba(red, .3);
+        border-color: rgba(whitesmoke, .3);
         .navbar-header .navbar-brand {
             color: rgba(white, .7);
             &:hover,
@@ -126,7 +126,7 @@ aside {
             }
         }
         &.affix {
-            background-color: white;
+            background-color: red; //white
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
