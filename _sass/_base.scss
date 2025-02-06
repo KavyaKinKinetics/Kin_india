@@ -115,14 +115,14 @@ aside {
             color: rgba(whitesmoke, .7); //kinkinetics top left side
             &:hover,
             &:focus {
-                color: #007ba7; //kinkinetics hover
+                color: #001f3f; //kinkinetics hover
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
             color: rgba(#007ba7, .7); //nav buttons normal
             &:hover {
-                color: #001f3f; //nav buttons hover
+                color: #001f3f; //nav buttons page down
             }
         }
         &.affix {
