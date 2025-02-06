@@ -300,7 +300,7 @@ header {
 }
 
 .btn-primary {
-    @include button-variant(#001f3f(193, 9, 9), $theme-primary, $theme-primary); //text inside orange
+    @include button-variant(#001f3f, $theme-primary, $theme-primary); //nav buttons text color
 }
 
 .btn {
