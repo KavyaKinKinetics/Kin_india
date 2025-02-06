@@ -112,17 +112,17 @@ aside {
         background-color: transparent;
         border-color: rgba(whitesmoke, .3);
         .navbar-header .navbar-brand {
-            color: rgba(white, .7);
+            color: rgba(whitesmoke, .7);
             &:hover,
             &:focus {
-                color: white;
+                color: whitesmoke;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(white, .7);
+            color: rgba(whitesmoke, .7);
             &:hover {
-                color: white;
+                color: whitesmoke;
             }
         }
         &.affix {
@@ -300,7 +300,7 @@ header {
 }
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
+    @include button-variant(black, $theme-primary, $theme-primary);
 }
 
 .btn {
