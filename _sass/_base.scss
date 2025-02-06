@@ -48,7 +48,7 @@ p {
 
 .bg-dark {
     background-color: $theme-dark;
-    color: black;
+    color: whitesmoke;
 }
 
 .text-faded {
@@ -300,7 +300,7 @@ header {
 }
 
 .btn-primary {
-    @include button-variant(rgb(193, 9, 9), $theme-primary, $theme-primary);
+    @include button-variant(#001f3f(193, 9, 9), $theme-primary, $theme-primary); //text inside orange
 }
 
 .btn {
