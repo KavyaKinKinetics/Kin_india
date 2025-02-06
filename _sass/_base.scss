@@ -112,21 +112,21 @@ aside {
         background-color: transparent;
         border-color: rgba(whitesmoke, .3);
         .navbar-header .navbar-brand {
-            color: rgba(whitesmoke, .7);
+            color: rgba(whitesmoke, .7); //kinkinetics top left side
             &:hover,
             &:focus {
-                color: red;
+                color: #007ba7; //kinkinetics hover
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(whitesmoke, .7);
+            color: rgba(green, .7); 
             &:hover {
                 color: #007ba7;
             }
         }
         &.affix {
-            background-color: whitesmoke; //nav bar color
+            background-color: yellow; //nav bar color
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
