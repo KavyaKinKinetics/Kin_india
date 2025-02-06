@@ -120,13 +120,13 @@ aside {
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(green, .7); 
+            color: rgba(#007ba7, .7); //nav buttons normal
             &:hover {
-                color: #007ba7;
+                color: #001f3f; //nav buttons hover
             }
         }
         &.affix {
-            background-color: yellow; //nav bar color
+            background-color: whitesmoke; //nav bar color
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
