@@ -324,24 +324,24 @@ header {
 // Extras
 // -- Highlight Color Customization
 ::-moz-selection {
-    color: rgb(247, 6, 114); //white
+    color: white; //white
     text-shadow: none;
     background: $theme-dark;
 }
 
 ::selection {
-    color: green; //white
+    color: white; //white
     text-shadow: none;
     background: $theme-dark;
 }
 
 img::selection {
-    color: yellow; //white
+    color: white; //white
     background: transparent;
 }
 
 img::-moz-selection {
-    color: blue; //white
+    color: white; //white
     background: transparent;
 }
 
