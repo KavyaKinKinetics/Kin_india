@@ -15,7 +15,7 @@ hr {
 }
 
 hr.light {
-    border-color: whitesmoke; //white
+    border-color: white; //white
 }
 
 a {
@@ -48,11 +48,11 @@ p {
 
 .bg-dark {
     background-color: $theme-dark;
-    color: whitesmoke;
+    color: white;
 }
 
 .text-faded {
-    color: rgba(#001f3f, .7); //portfolio text heading
+    color: rgba(white, .7); //portfolio text heading
 }
 
 section {
@@ -70,7 +70,7 @@ aside {
 // Navigation
 
 .navbar-default {
-    background-color: whitesmoke;
+    background-color: white;
     border-color: rgba($theme-dark, .5);
     @include sans-serif-font;
     @include transition-all;
@@ -110,23 +110,23 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: rgba(whitesmoke, .3);
+        border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
-            color: rgba(whitesmoke, .7); //kinkinetics top left side
+            color: rgba(white, .7); //kinkinetics top left side
             &:hover,
             &:focus {
-                color: #001f3f; //kinkinetics hover
+                color: white; //kinkinetics hover
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(#007ba7, .7); //nav buttons normal
+            color: rgba(#fcfcfc, .7); //nav buttons normal
             &:hover {
-                color: #001f3f; //nav buttons page down
+                color: white; //nav buttons page down
             }
         }
         &.affix {
-            background-color: whitesmoke; //nav bar color
+            background-color: white; //nav bar color
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
@@ -157,7 +157,7 @@ header {
     background-position: center;
     background-image: url('../img/header4.jpg');
     text-align: center;
-    color: #b0e0e6; //welcome to kinkinetics dss
+    color: white; //welcome to kinkinetics dss
     .header-content {
         position: relative;
         text-align: center;
@@ -175,7 +175,7 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(whitesmoke, .7); //Decisions in Moments, Impact for a Lifetime!
+                color: rgba(white, .7); //Decisions in Moments, Impact for a Lifetime!
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -300,7 +300,7 @@ header {
 }
 
 .btn-primary {
-    @include button-variant(#001f3f, $theme-primary, $theme-primary); //nav buttons text color
+    @include button-variant(white, $theme-primary, $theme-primary); //nav buttons text color
 }
 
 .btn {
