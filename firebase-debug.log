@@ -1,0 +1,10 @@
+[2025-02-16T10:30:34.152Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[2025-02-16T10:30:34.154Z] > authorizing via signed-in user (ramdas@kinkinetics.com)
+? What would you like to call your project? (defaults to your project ID) [74D[74C[2K[G? What would you like to call your project? (defaults to your project ID) [74D[74C[2K[G? What would you like to call your project? (defaults to your project ID) s[75D[75C[2K[G? What would you like to call your project? (defaults to your project ID) ss[76D[76C  13.31.1
+[debug] [2025-02-16T10:30:34.145Z] Platform:      linux
+[debug] [2025-02-16T10:30:34.145Z] Node Version:  v20.16.0
+[debug] [2025-02-16T10:30:34.145Z] Time:          Sun Feb 16 2025 16:00:34 GMT+0530 (India Standard Time)
+[debug] [2025-02-16T10:30:34.146Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-02-16T10:30:34.152Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-02-16T10:30:34.154Z] > authorizing via signed-in user (ramdas@kinkinetics.com)
