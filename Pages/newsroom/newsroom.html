@@ -1,3 +1,8 @@
+---
+layout: default
+title: Newsroom
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,32 +16,38 @@
             color: white;
             @include serif-font;
         }
-        h1{
-            background-color: $theme-dark;
-            @include serif-font;
-            color: #001f3f; /* Change this to your desired color */
-            text-align: center;}
-            width: 100%;
 
+        h1 {
+            text-align: center;
+            color: #001f3f;
+            margin-top: 20px;
         }
+
         h2, h3, h4, h5, h6 {
             @include sans-serif-font;
         }
+
         a {
             @include transition-all;
             color: $theme-primary;
         }
+
         a:hover, a:focus {
             color: darken($theme-primary, 10%);
         }
+
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            margin-left: 50px;
-            margin-top: 20px;
-     
+            max-width: 900px;
+            margin: auto;
+            padding-top: 20px;
         }
+
+        .news-container {
+            position: relative;
+            padding-left: 50px;
+            margin-top: 20px;
+        }
+
         .timeline {
             position: absolute;
             left: 20px;
@@ -45,23 +56,18 @@
             width: 4px;
             background-color: #001f3f;
         }
-        .news-container {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            width: 100%;
-            padding-left: 50px;
-        }
+
         .news-item {
             display: flex;
             align-items: center;
             margin-bottom: 40px;
-            position: relative;
             background-color: #b0e0e6;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
+
         .dot {
             position: absolute;
             left: -28px;
@@ -72,43 +78,61 @@
             border-radius: 50%;
             transform: translate(-50%, 0);
         }
+
         .news-date {
-            position: absolute;
-            left: 40px;
-            transform: translateY(-50%);
-            white-space: nowrap;
             font-size: 14px;
             color: #001f3f;
             font-weight: bold;
-
         }
+
         .news-content {
             display: flex;
             align-items: center;
             background: #b0e0e6;
             padding: 10px;
             border-radius: 10px;
-            width: calc(100% - 120px);
-            margin-left: 150px;
+            width: 100%;
         }
+
         .news-thumbnail {
-            width: 120px; /* Adjust width as needed */
-            height: calc(120px * 3 / 4); /* Ensures a 4:3 aspect ratio */
+            width: 120px;
+            height: 90px;
             border-radius: 10px;
             margin-right: 15px;
-            object-fit: cover; /* Ensures the image fills the box without distortion */
+            object-fit: cover;
         }
 
         .news-text {
             flex: 1;
-            color: #001f3f
+            color: #001f3f;
         }
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#page-top">KinKinetics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="_includes/call-to-action.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="_includes/services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="_includes/team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="_includes/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs/blogs.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Newsroom Section -->
     <div class="container">
         <h1>Newsroom</h1>
-        <p>Stay updated with the latest innovations from KinKinetics.</p>
+        <p class="text-center">Stay updated with the latest innovations from KinKinetics.</p>
         <div class="news-container">
             <div class="timeline"></div>
             <div id="newsList"></div>
@@ -120,7 +144,6 @@
             { date: "Feb 10, 2025", title: "KinKinetics Unveils AI Emotional Companion", image: "igniteSpace.png" },
             { date: "Jan 25, 2025", title: "Partnership with SpaceTech Innovations", image: "thumbnail2.jpg" },
             { date: "Jan 10, 2025", title: "KinKinetics at CES 2025", image: "thumbnail3.jpg" }
-            
         ];
         
         function renderNews() {
@@ -132,18 +155,21 @@
                 
                 newsItem.innerHTML = `
                     <div class="dot"></div>
-                    <div class="news-date">${news.date}</div>
                     <div class="news-content">
                         <img src="${news.image}" class="news-thumbnail" alt="News Image">
                         <div class="news-text">
                             <h3>${news.title}</h3>
+                            <span class="news-date">${news.date}</span>
                         </div>
                     </div>
                 `;
                 newsList.appendChild(newsItem);
             });
         }
+        
         renderNews();
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
