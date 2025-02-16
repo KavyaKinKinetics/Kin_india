@@ -9,68 +9,100 @@
         body {
             background-color: #121212;
             color: white;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .timeline {
+            position: absolute;
+            left: 40px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: white;
         }
         .news-container {
             display: flex;
-            gap: 20px;
-            padding: 20px;
-        }
-        .timeline {
-            width: 30%;
-        }
-        .news-feed {
-            width: 70%;
+            align-items: flex-start;
+            position: relative;
+            width: 80%;
+            padding-left: 80px;
         }
         .news-item {
-            display: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
         }
-        .news-item.active {
-            display: block;
+        .dot {
+            position: absolute;
+            left: -15px;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .news-content {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
         }
         .news-thumbnail {
-            width: 100%;
-            height: auto;
+            width: 100px;
+            height: 100px;
             border-radius: 10px;
+            margin-right: 15px;
+        }
+        .news-text {
+            flex: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="mt-4">Newsroom</h1>
+        <h1>Newsroom</h1>
         <p>Stay updated with the latest innovations from KinKinetics.</p>
         <div class="news-container">
-            <div class="timeline">
-                <ul class="list-group">
-                    <li class="list-group-item" onclick="showNews(0)">Feb 10, 2025</li>
-                    <li class="list-group-item" onclick="showNews(1)">Jan 25, 2025</li>
-                    <li class="list-group-item" onclick="showNews(2)">Jan 10, 2025</li>
-                </ul>
-            </div>
-            <div class="news-feed">
-                <div class="news-item active">
-                    <h3>KinKinetics Unveils AI Emotional Companion</h3>
-                    <p>We have officially launched our first AI-driven emotional companion...</p>
-                    <img src="thumbnail1.jpg" class="news-thumbnail" alt="News Image">
-                </div>
-                <div class="news-item">
-                    <h3>Partnership with SpaceTech Innovations</h3>
-                    <p>We are thrilled to announce our partnership with SpaceTech Innovations...</p>
-                    <img src="thumbnail2.jpg" class="news-thumbnail" alt="News Image">
-                </div>
-                <div class="news-item">
-                    <h3>KinKinetics at CES 2025</h3>
-                    <p>We showcased our latest AI at CES 2025, receiving amazing feedback...</p>
-                    <img src="thumbnail3.jpg" class="news-thumbnail" alt="News Image">
-                </div>
-            </div>
+            <div class="timeline"></div>
+            <div id="newsList"></div>
         </div>
     </div>
+    
     <script>
-        function showNews(index) {
-            let items = document.querySelectorAll('.news-item');
-            items.forEach(item => item.classList.remove('active'));
-            items[index].classList.add('active');
+        const newsData = [
+            { date: "Feb 10, 2025", title: "KinKinetics Unveils AI Emotional Companion", image: "thumbnail1.jpg" },
+            { date: "Jan 25, 2025", title: "Partnership with SpaceTech Innovations", image: "thumbnail2.jpg" },
+            { date: "Jan 10, 2025", title: "KinKinetics at CES 2025", image: "thumbnail3.jpg" }
+        ];
+        
+        function renderNews() {
+            const newsList = document.getElementById("newsList");
+            newsList.innerHTML = "";
+            newsData.forEach(news => {
+                const newsItem = document.createElement("div");
+                newsItem.classList.add("news-item");
+                
+                newsItem.innerHTML = `
+                    <div class="dot"></div>
+                    <div class="news-content">
+                        <img src="${news.image}" class="news-thumbnail" alt="News Image">
+                        <div class="news-text">
+                            <strong>${news.date}</strong>
+                            <h3>${news.title}</h3>
+                        </div>
+                    </div>
+                `;
+                newsList.appendChild(newsItem);
+            });
         }
+        renderNews();
     </script>
 </body>
 </html>
