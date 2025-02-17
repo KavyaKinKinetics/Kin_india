@@ -14,13 +14,27 @@
         header {
             background-color: #f8f9fa;
             padding: 20px;
-            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        header a {
+        header a.logo {
             font-size: 2rem;
             font-weight: bold;
             color: #001f3f; /* Blue color for the logo */
             text-decoration: none;
+        }
+        nav {
+            display: flex;
+        }
+        nav a {
+            margin-left: 20px;
+            font-size: 1rem;
+            color: #001f3f;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         .content {
             flex: 1; /* Push footer to the bottom */
@@ -43,8 +57,17 @@
     </style>
 </head>
 <body>
+
     <header>
-        <a href="https://www.kinkinetics.co.in/">KINKINETICS</a>
+        <a href="#page-top" class="logo">KINKINETICS</a>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+            <a href="blogs/blogs.html">Blog</a>
+        </nav>
     </header>
 
     <div class="content">
@@ -52,5 +75,6 @@
     </div>
 
     {% include footer.html %}
+
 </body>
 </html>
