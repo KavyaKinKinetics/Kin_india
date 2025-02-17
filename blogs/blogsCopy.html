@@ -71,14 +71,35 @@ title: "Updates"
         color: #666;
         margin-top: 10px;
     }
+
+    /* Media Queries for responsiveness */
+    @media (max-width: 768px) {
+        .article-card {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 200px; /* Set height for better uniformity */
+        }
+
+        .article-content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem; /* Adjust font size for smaller screens */
+        }
+    }
 </style>
 
 <section id="updates">
     <div class="container">
         <!-- Title -->
         <h1>Updates</h1>
-           <!-- Article 3 -->
-           <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/A3-CanWePredictDecompressionSickness.html'">
+        <!-- Article 3 -->
+        <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/A3-CanWePredictDecompressionSickness.html'">
             <!-- Thumbnail Image -->
             <img src="/Pages/UpdatesPage/Images/inArticle3.jpg" alt="Thumbnail Image">
             <!-- Title and Date -->
@@ -110,6 +131,5 @@ title: "Updates"
     </div>
 </section>
 
-<!-- Bootstrap JavaScript for Navbar Toggle -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Bootstrap 5 Script for Navbar Toggle (Replace Bootstrap 3) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
