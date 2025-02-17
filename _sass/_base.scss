@@ -1,8 +1,3 @@
----
-layout: default
-title: Newsroom
----
-
 html,
 body {
     height: 100%;
@@ -20,7 +15,7 @@ hr {
 }
 
 hr.light {
-    border-color: white; //white
+    border-color: white;
 }
 
 a {
@@ -57,7 +52,7 @@ p {
 }
 
 .text-faded {
-    color: rgba(white, .7); //portfolio text heading
+    color: rgba(white, .7);
 }
 
 section {
@@ -117,21 +112,21 @@ aside {
         background-color: transparent;
         border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
-            color: rgba(white, .7); //kinkinetics top left side
+            color: rgba(white, .7);
             &:hover,
             &:focus {
-                color: white; //kinkinetics hover
+                color: white;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: rgba(#fcfcfc, .7); //nav buttons normal
+            color: rgba(white, .7);
             &:hover {
-                color: white; //nav buttons page down
+                color: white;
             }
         }
         &.affix {
-            background-color: white; //nav bar color
+            background-color: white;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
@@ -156,13 +151,13 @@ aside {
 
 header {
     position: relative;
-    width: auto;
-    height: auto;
+    width: 100%;
+    min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header4.jpg');
+    background-image: url('../img/header.jpg');
     text-align: center;
-    color: white; //welcome to kinkinetics dss
+    color: white;
     .header-content {
         position: relative;
         text-align: center;
@@ -180,7 +175,7 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(white, .7); //Decisions in Moments, Impact for a Lifetime!
+                color: rgba(white, .7);
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -301,11 +296,11 @@ header {
 
 // Button Styles
 .btn-default {
-    @include button-variant($theme-dark, white, white); //1.send message 
+    @include button-variant($theme-dark, white, white);
 }
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary); //nav buttons text color
+    @include button-variant(white, $theme-primary, $theme-primary);
 }
 
 .btn {
@@ -329,24 +324,24 @@ header {
 // Extras
 // -- Highlight Color Customization
 ::-moz-selection {
-    color: white; //white
+    color: white;
     text-shadow: none;
     background: $theme-dark;
 }
 
 ::selection {
-    color: white; //white
+    color: white;
     text-shadow: none;
     background: $theme-dark;
 }
 
 img::selection {
-    color: white; //white
+    color: white;
     background: transparent;
 }
 
 img::-moz-selection {
-    color: white; //white
+    color: white;
     background: transparent;
 }
 
