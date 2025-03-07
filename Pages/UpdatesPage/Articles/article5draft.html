@@ -78,21 +78,24 @@ date: 2025-03-06
     .share-buttons {
         display: flex;
         justify-content: center;
-        gap: 10px;
+        gap: 15px;
         margin: 20px 0;
     }
 
     .share-buttons a {
         display: inline-block;
-        padding: 10px 20px;
-        font-size: 1rem;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
         color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background 0.3s ease;
+        font-size: 1.2rem;
+        transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
     .share-buttons a:hover {
+        transform: scale(1.1);
         opacity: 0.9;
     }
 
@@ -112,6 +115,9 @@ date: 2025-03-06
         background-color: #E4405F; /* Instagram pink */
     }
 </style>
+
+<!-- Add Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <section id="project-details">
     <div class="container">
@@ -152,12 +158,20 @@ date: 2025-03-06
                     Follow KinKinetics for insights on neuroscience, AI, and human performance!
                 </strong>
 
-                <!-- Social Media Share Buttons -->
+                <!-- Social Media Share Buttons with Icons -->
                 <div class="share-buttons">
-                    <a href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=Can AI Predict Astronaut Health Risks?" class="twitter" target="_blank">Share on Twitter</a>
-                    <a href="https://www.linkedin.com/shareArticle?url=YOUR_URL_HERE&title=Can AI Predict Astronaut Health Risks?" class="linkedin" target="_blank">Share on LinkedIn</a>
-                    <a href="https://api.whatsapp.com/send?text=Can AI Predict Astronaut Health Risks? - YOUR_URL_HERE" class="whatsapp" target="_blank">Share on WhatsApp</a>
-                    <a href="https://www.instagram.com/?url=YOUR_URL_HERE" class="instagram" target="_blank">Share on Instagram</a>
+                    <a href="https://twitter.com/intent/tweet?url=YOUR_URL_HERE&text=Can AI Predict Astronaut Health Risks?" class="twitter" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/shareArticle?url=YOUR_URL_HERE&title=Can AI Predict Astronaut Health Risks?" class="linkedin" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?text=Can AI Predict Astronaut Health Risks? - YOUR_URL_HERE" class="whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.instagram.com/?url=YOUR_URL_HERE" class="instagram" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
             </div>
         </div>
