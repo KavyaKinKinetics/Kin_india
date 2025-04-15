@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest Blogs</title>
+  <style>
+    /* Parent container to center both blog cards and button */
+    .center-container {
+      display: flex;
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;    /* Center items horizontally */
+    }
+
+    /* Container for blog cards */
+    .blog-cards-container {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-direction: row; /* Arrange cards horizontally */
+      justify-content: center; /* Center cards horizontally */
+    }
+
+    /* Styling for individual blog cards */
+    .blog-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 220px;
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+      background-color: #fff;
+    }
+
+    /* Hover effect for cards */
+    .blog-card:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    /* Thumbnail image styling */
+    .blog-thumbnail {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    /* Blog title styling */
+    .blog-title {
+      padding: 12px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    /* Button styling */
+    .view-all-btn {
+      padding: 10px 20px;
+      font-size: 1em;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Button hover effect */
+    .view-all-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Parent container to center both blog cards and button -->
+  <div class="center-container">
+    <!-- Container for blog cards -->
+    <div id="latest-blogs" class="blog-cards-container"></div>
+
+    <!-- Button to navigate to the blogs page -->
+    <button id="view-all-blogs" class="view-all-btn">View All Blogs</button>
+  </div>
+
+  <script>
+    // Blog data array (Change these values to update your blogs)
+    const blogs = [
+      {
+        title: "Can AI Predict Astronaut Health Risks", 
+        thumbnail: "/Pages/UpdatesPage/Images/inArticle5-CanAIPredictAstronautHealthRisks.jpg", 
+        link: "/Pages/UpdatesPage/Articles/A5-CanAIPredictAstronautHealthRisks.html"
+      },
+      {
+        title: "Decision-Making Under Pressure - Lessons from Space Missions & Extreme Environments", 
+        thumbnail: "/Pages/UpdatesPage/Images/inArticle4-DecisionMakingUnderPressure.jpg",
+        link: "/Pages/UpdatesPage/Articles/A4-DecisionMakingUnderPressure.html"
+      },
+      {
+        title: "Can We Predict Decompression Sickness for Future Lunar and Martian Astronauts?",
+        thumbnail: "/Pages/UpdatesPage/Images/inArticle3.jpg",
+        link: "/Pages/UpdatesPage/Articles/A3-CanWePredictDecompressionSickness.html"
+      }
+    ];
+
+    // Get the last 2 or 3 blogs (Change the number to display more or fewer blogs)
+    const latestBlogs = blogs.slice(-3).reverse();
+
+    // Select the container where the blog cards will be added
+    const container = document.getElementById('latest-blogs');
+
+    // Loop through the latest blogs and create cards
+    latestBlogs.forEach(blog => {
+      const card = document.createElement('div');
+      card.className = 'blog-card';
+      
+      // Make the card clickable and navigate to the blog link
+      card.onclick = () => window.location.href = blog.link;
+
+      // Add content (thumbnail and title) to the card
+      card.innerHTML = `
+        <img src="${blog.thumbnail}" alt="${blog.title}" class="blog-thumbnail" />
+        <div class="blog-title">${blog.title}</div>
+      `;
+      
+      // Append the card to the container
+      container.appendChild(card);
+    });
+
+    // Add functionality to the "View All Blogs" button
+    document.getElementById('view-all-blogs').onclick = function() {
+      window.location.href = "blogs/blogs.html"; // Change this path if your blogs page is located elsewhere
+    };
+  </script>
+
+</body>
+</html>
