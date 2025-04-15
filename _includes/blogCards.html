@@ -19,6 +19,7 @@
       margin-bottom: 20px;
       flex-direction: row; /* Arrange cards horizontally */
       justify-content: center; /* Center cards horizontally */
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
     }
 
     /* Styling for individual blog cards */
@@ -26,7 +27,8 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       overflow: hidden;
-      width: 440px; /* Doubled the width */
+      width: 30%; /* Use percentage-based width */
+      max-width: 440px; /* Set a maximum width */
       cursor: pointer;
       transition: box-shadow 0.2s;
       background-color: #fff;
@@ -40,14 +42,13 @@
     /* Thumbnail image styling */
     .blog-thumbnail {
       width: 100%;
-      height: 240px; /* Doubled the height */
-      object-fit: cover;
+      height: auto; /* Automatically adjust height based on width */
     }
 
     /* Blog title styling */
     .blog-title {
       padding: 12px;
-      font-family: sans-serif; /* Add this line */
+      font-family: sans-serif; /* Added sans-serif font */
       font-size: 1.1em;
       font-weight: bold;
     }
@@ -56,6 +57,7 @@
     .view-all-btn {
       padding: 10px 20px;
       font-size: 1em;
+      font-family: sans-serif; /* Optional: Apply sans-serif to button text */
       background: #110367; /* Changed button color */
       color: #fff;
       border: none;
@@ -66,6 +68,20 @@
     /* Button hover effect */
     .view-all-btn:hover {
       background: #0a0d5c; /* Darker shade for hover */
+    }
+
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      .blog-cards-container {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center;   /* Center cards vertically */
+        gap: 20px;             /* Add spacing between stacked cards */
+      }
+
+      .blog-card {
+        width: 90%;            /* Make cards take up most of the screen width */
+        max-width: none;       /* Remove maximum width constraint for smaller screens */
+      }
     }
   </style>
 </head>
