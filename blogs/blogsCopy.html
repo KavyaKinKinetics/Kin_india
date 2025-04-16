@@ -1,5 +1,5 @@
 ---
-layout: subpage
+layout: page
 title: "Updates"
 ---
 
@@ -45,21 +45,22 @@ title: "Updates"
 
     /* Thumbnail Image Styling */
     .article-card img {
-        width: 180px;
-        object-fit: cover;
+        width: 180px; /* Fixed width for desktop */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Ensure images fill their container without distortion */
         border-right: 2px solid #e0e0e0;
     }
 
     /* Content Styling */
     .article-content {
         padding: 15px;
-        flex: 1;
+        flex-grow: 1; /* Make content take up remaining space */
     }
 
     .article-content h2 {
         font-size: 1.8rem;
-        color: #007bff;
-        margin: 0;
+        color: #110367;
+        margin-bottom: 10px; /* Added spacing below heading */
     }
 
     .article-content h2:hover {
@@ -69,28 +70,37 @@ title: "Updates"
     .article-content p {
         font-size: 0.9rem;
         color: #666;
-        margin-top: 10px;
     }
 
-    /* Media Queries for responsiveness */
+    /* Responsive Design for Smaller Screens */
     @media (max-width: 768px) {
-        .article-card {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .article-card img {
-            width: 100%;
-            height: 200px; /* Set height for better uniformity */
-        }
-
-        .article-content {
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 2rem; /* Adjust font size for smaller screens */
-        }
+      .article-card {
+          flex-direction: column; /* Stack image and content vertically */
+          align-items: flex-start; /* Align items to the left */
+      }
+      
+      .article-card img {
+          width: 100%; /* Make image take full width on small screens */
+          height: auto; /* Adjust height proportionally */
+          border-right: none; /* Remove border on small screens */
+      }
+      
+      .article-content h2 {
+          font-size: 1.4rem; /* Adjust title size for readability on smaller screens */
+      }
+      
+      .article-content p {
+          font-size: 0.8rem; /* Adjust paragraph size for readability */
+      }
+      
+      #updates h1 {
+          font-size: 2rem; /* Reduce title size for smaller screens */
+      }
+      
+      #updates .container {
+          padding-left: 10px; 
+          padding-right: 10px; 
+      }
     }
 </style>
 
@@ -98,38 +108,57 @@ title: "Updates"
     <div class="container">
         <!-- Title -->
         <h1>Updates</h1>
-        <!-- Article 3 -->
-        <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/A3-CanWePredictDecompressionSickness.html'">
-            <!-- Thumbnail Image -->
+        
+        <!-- Article Cards -->
+        
+        <!-- Article 5 -->
+        <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/A5-CanAIPredictAstronautHealthRisks.html'">
+            <img src="/Pages/UpdatesPage/Images/inArticle5-CanAIPredictAstronautHealthRisks.jpg" alt="Thumbnail Image">
+            <div class="article-content">
+                <h2>Can AI Predict Astronaut Health Risks</h2>
+                <p>March 06 | 1-2 min read</p>
+            </div>
+        </div>
+        
+        <!-- Article 4 -->
+        <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/A4-DecisionMakingUnderPressure.html'">
+            <img src="/Pages/UpdatesPage/Images/inArticle4-DecisionMakingUnderPressure.jpg" alt="Thumbnail Image">
+            <div class="article-content">
+                <h2>Decision-Making Under Pressure - Lessons from Space Missions & Extreme Environments</h2>
+                <p>February 27 | 1-2 min read</p>
+            </div>
+        </div>
+        
+           <!-- Article 3 -->
+           <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/A3-CanWePredictDecompressionSickness.html'">
             <img src="/Pages/UpdatesPage/Images/inArticle3.jpg" alt="Thumbnail Image">
-            <!-- Title and Date -->
             <div class="article-content">
                 <h2>Can We Predict Decompression Sickness for Future Lunar and Martian Astronauts?</h2>
                 <p>February 17 | 1-2 min read</p>
             </div>
-        </div>
-        <!-- Article 2 -->
-        <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/Article2.html'">
-            <!-- Thumbnail Image -->
+           </div>
+
+           <!-- Article 2 -->
+           <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/Article2.html'">
             <img src="/Pages/UpdatesPage/Images/inArticle2.png" alt="Thumbnail Image">
-            <!-- Title and Date -->
             <div class="article-content">
                 <h2>Maximizing Utility and Minimizing Loss The Core of Effective Decision Support</h2>
                 <p>January, 6 | 6-8 min read</p>
             </div>
-        </div>
-        <!-- Article 1 -->
-        <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/Article1.html'">
-            <!-- Thumbnail Image -->
+           </div>
+
+           <!-- Article 1 -->
+           <div class="article-card" onclick="window.location.href='/Pages/UpdatesPage/Articles/Article1.html'">
             <img src="/Pages/UpdatesPage/Images/inArticle1.png" alt="Thumbnail Image">
-            <!-- Title and Date -->
             <div class="article-content">
                 <h2>The Importance of Time-Critical Decision Support Systems in Health, Space, and Defense</h2>
                 <p>December 30, 2024 | 4-5 min read</p>
             </div>
-        </div>
-    </div>
+           </div>
+
+       </div>
 </section>
 
-<!-- Bootstrap 5 Script for Navbar Toggle (Replace Bootstrap 3) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap JavaScript for Navbar Toggle -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
